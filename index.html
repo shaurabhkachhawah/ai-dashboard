@@ -14,6 +14,11 @@
 <body>
 
 
+<!-- AI BACKGROUND -->
+
+<canvas id="ai-bg"></canvas>
+
+
 <header class="header">
 
 <div class="top-bar">
@@ -40,6 +45,8 @@
 
 
 
+<!-- INSTAGRAM COMMUNITY -->
+
 <section class="insta-counter">
 
 <h2>Instagram Community</h2>
@@ -50,7 +57,9 @@
 
 <p id="followers">10K+ Followers</p>
 
-<a class="follow-btn" href="https://instagram.com/vaibhavrjawt" target="_blank">
+<a class="follow-btn"
+href="https://instagram.com/vaibhavrjawt"
+target="_blank">
 
 Follow on Instagram
 
@@ -62,6 +71,8 @@ Follow on Instagram
 
 
 
+<!-- INSTAGRAM VIDEOS -->
+
 <section class="videos">
 
 <h2>Featured AI Videos</h2>
@@ -69,14 +80,16 @@ Follow on Instagram
 <div class="video-grid">
 
 
-<blockquote class="instagram-media"
+<blockquote
+class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
 data-instgrm-version="14">
 
 </blockquote>
 
 
-<blockquote class="instagram-media"
+<blockquote
+class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
 data-instgrm-version="14">
 
@@ -88,6 +101,8 @@ data-instgrm-version="14">
 </section>
 
 
+
+<!-- ABOUT CREATOR -->
 
 <section class="about-section">
 
@@ -106,7 +121,7 @@ data-instgrm-version="14">
 <p>
 
 I create cinematic AI storytelling videos and viral reels.
-My goal is to combine creativity and artificial intelligence to build next-generation content for social media.
+My goal is to merge creativity with artificial intelligence and produce futuristic content for social media.
 
 </p>
 
@@ -117,6 +132,8 @@ My goal is to combine creativity and artificial intelligence to build next-gener
 </section>
 
 
+
+<!-- CONTACT -->
 
 <section class="contact">
 
@@ -141,17 +158,80 @@ My goal is to combine creativity and artificial intelligence to build next-gener
 <script async src="//www.instagram.com/embed.js"></script>
 
 
+
+<!-- THEME SWITCH -->
+
 <script>
 
-const themeBtn = document.getElementById("themeToggle")
+const themeBtn=document.getElementById("themeToggle")
 
-themeBtn.onclick = () => {
+themeBtn.onclick=()=>{
 
 document.body.classList.toggle("light-theme")
 
 }
 
 </script>
+
+
+
+<!-- AI BACKGROUND ANIMATION -->
+
+<script>
+
+const canvas=document.getElementById("ai-bg")
+
+const ctx=canvas.getContext("2d")
+
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+for(let i=0;i<80;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:2,
+speedX:(Math.random()-0.5),
+speedY:(Math.random()-0.5)
+
+})
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+
+p.x+=p.speedX
+p.y+=p.speedY
+
+if(p.x<0 || p.x>canvas.width) p.speedX*=-1
+if(p.y<0 || p.y>canvas.height) p.speedY*=-1
+
+ctx.beginPath()
+
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
+
+ctx.fillStyle="#ff2d2d"
+
+ctx.fill()
+
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+</script>
+
 
 
 <script type="module" src="app.js"></script>
