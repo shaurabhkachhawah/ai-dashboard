@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <title>Vaibhav AI Studio</title>
 
 <link rel="stylesheet" href="style.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
 
-
-<!-- AI NEURAL BACKGROUND -->
-
 <canvas id="ai-bg"></canvas>
 
-
-
-<header class="header">
+<header>
 
 <div class="top-bar">
 
@@ -45,8 +38,41 @@
 </header>
 
 
+<section class="hero">
 
-<!-- INSTAGRAM COMMUNITY -->
+<h2>AI Cinematic Video Creator</h2>
+
+<p>
+Creating futuristic AI storytelling videos and viral cinematic reels
+</p>
+
+</section>
+
+
+<section class="stats">
+
+<div class="stat-card">
+<h3>10K+</h3>
+<p>Followers</p>
+</div>
+
+<div class="stat-card">
+<h3>3M+</h3>
+<p>Total Views</p>
+</div>
+
+<div class="stat-card">
+<h3>50+</h3>
+<p>AI Reels</p>
+</div>
+
+<div class="stat-card">
+<h3>20+</h3>
+<p>Brand Collaborations</p>
+</div>
+
+</section>
+
 
 <section class="insta-counter">
 
@@ -71,9 +97,6 @@ Follow on Instagram
 </section>
 
 
-
-<!-- INSTAGRAM VIDEOS -->
-
 <section class="videos">
 
 <h2>Featured AI Videos</h2>
@@ -82,13 +105,12 @@ Follow on Instagram
 
 <blockquote
 class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVlP8GAgdgb/"
+data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
 data-instgrm-version="14"></blockquote>
-
 
 <blockquote
 class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
+data-instgrm-permalink="https://www.instagram.com/reel/DVlP8GAgdgb/"
 data-instgrm-version="14"></blockquote>
 
 </div>
@@ -96,16 +118,13 @@ data-instgrm-version="14"></blockquote>
 </section>
 
 
-
-<!-- ABOUT CREATOR -->
-
 <section class="about-section">
 
 <h2>About The Creator</h2>
 
 <div class="about-container">
 
-<img src="founder.jpg" class="founder-img">
+<img src="images/founder.jpg" class="founder-img">
 
 <div class="about-text">
 
@@ -116,8 +135,8 @@ data-instgrm-version="14"></blockquote>
 <p>
 
 I create cinematic AI storytelling videos and viral reels.
-My goal is to combine creativity and artificial intelligence
-to build futuristic content for social media.
+My mission is to combine creativity and artificial intelligence
+to build next generation social media content.
 
 </p>
 
@@ -128,19 +147,41 @@ to build futuristic content for social media.
 </section>
 
 
+<section class="ai-services">
 
-<!-- CONTACT -->
+<h2>AI Content Types</h2>
 
-<section class="contact">
+<div class="service-grid">
 
-<h2>Contact</h2>
+<div class="service">AI Storytelling</div>
+<div class="service">AI Cinematic Videos</div>
+<div class="service">AI History Simulation</div>
+<div class="service">AI Sci-Fi Worlds</div>
 
-<p>Email: shaurabhkchahwah@gmail.com</p>
-
-<p>Instagram: @vaibhavrjawt</p>
+</div>
 
 </section>
 
+
+<section class="contact">
+
+<h2>Collaboration</h2>
+
+<form>
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Brand">
+
+<textarea placeholder="Message"></textarea>
+
+<button>Send</button>
+
+</form>
+
+</section>
 
 
 <footer>
@@ -150,12 +191,8 @@ to build futuristic content for social media.
 </footer>
 
 
-
 <script async src="//www.instagram.com/embed.js"></script>
 
-
-
-<!-- THEME SWITCH -->
 
 <script>
 
@@ -170,84 +207,7 @@ document.body.classList.toggle("light-theme")
 </script>
 
 
-
-<!-- AI NEURAL NETWORK BACKGROUND -->
-
-<script>
-
-const canvas=document.getElementById("ai-bg")
-
-const ctx=canvas.getContext("2d")
-
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-
-let particles=[]
-
-for(let i=0;i<90;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-vx:(Math.random()-0.5),
-vy:(Math.random()-0.5),
-size:2
-
-})
-
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height)
-
-particles.forEach(p=>{
-
-p.x+=p.vx
-p.y+=p.vy
-
-if(p.x<0||p.x>canvas.width) p.vx*=-1
-if(p.y<0||p.y>canvas.height) p.vy*=-1
-
-ctx.beginPath()
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
-ctx.fillStyle="#ff2d2d"
-ctx.fill()
-
-particles.forEach(p2=>{
-
-let dx=p.x-p2.x
-let dy=p.y-p2.y
-
-let dist=Math.sqrt(dx*dx+dy*dy)
-
-if(dist<120){
-
-ctx.beginPath()
-ctx.strokeStyle="rgba(255,0,0,0.2)"
-ctx.moveTo(p.x,p.y)
-ctx.lineTo(p2.x,p2.y)
-ctx.stroke()
-
-}
-
-})
-
-})
-
-requestAnimationFrame(animate)
-
-}
-
-animate()
-
-</script>
-
-
-<script type="module" src="app.js"></script>
-
+<script src="app.js"></script>
 
 </body>
-
 </html>
