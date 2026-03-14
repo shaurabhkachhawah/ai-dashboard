@@ -14,9 +14,10 @@
 <body>
 
 
-<!-- AI BACKGROUND -->
+<!-- AI NEURAL BACKGROUND -->
 
 <canvas id="ai-bg"></canvas>
+
 
 
 <header class="header">
@@ -79,22 +80,16 @@ Follow on Instagram
 
 <div class="video-grid">
 
+<blockquote
+class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/reel/DVlP8GAgdgb/"
+data-instgrm-version="14"></blockquote>
+
 
 <blockquote
 class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
-data-instgrm-version="14">
-
-</blockquote>
-
-
-<blockquote
-class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
-data-instgrm-version="14">
-
-</blockquote>
-
+data-instgrm-version="14"></blockquote>
 
 </div>
 
@@ -121,7 +116,8 @@ data-instgrm-version="14">
 <p>
 
 I create cinematic AI storytelling videos and viral reels.
-My goal is to merge creativity with artificial intelligence and produce futuristic content for social media.
+My goal is to combine creativity and artificial intelligence
+to build futuristic content for social media.
 
 </p>
 
@@ -175,7 +171,7 @@ document.body.classList.toggle("light-theme")
 
 
 
-<!-- AI BACKGROUND ANIMATION -->
+<!-- AI NEURAL NETWORK BACKGROUND -->
 
 <script>
 
@@ -188,15 +184,15 @@ canvas.height=window.innerHeight
 
 let particles=[]
 
-for(let i=0;i<80;i++){
+for(let i=0;i<90;i++){
 
 particles.push({
 
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
-size:2,
-speedX:(Math.random()-0.5),
-speedY:(Math.random()-0.5)
+vx:(Math.random()-0.5),
+vy:(Math.random()-0.5),
+size:2
 
 })
 
@@ -208,19 +204,35 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
 
 particles.forEach(p=>{
 
-p.x+=p.speedX
-p.y+=p.speedY
+p.x+=p.vx
+p.y+=p.vy
 
-if(p.x<0 || p.x>canvas.width) p.speedX*=-1
-if(p.y<0 || p.y>canvas.height) p.speedY*=-1
+if(p.x<0||p.x>canvas.width) p.vx*=-1
+if(p.y<0||p.y>canvas.height) p.vy*=-1
 
 ctx.beginPath()
-
 ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
-
 ctx.fillStyle="#ff2d2d"
-
 ctx.fill()
+
+particles.forEach(p2=>{
+
+let dx=p.x-p2.x
+let dy=p.y-p2.y
+
+let dist=Math.sqrt(dx*dx+dy*dy)
+
+if(dist<120){
+
+ctx.beginPath()
+ctx.strokeStyle="rgba(255,0,0,0.2)"
+ctx.moveTo(p.x,p.y)
+ctx.lineTo(p2.x,p2.y)
+ctx.stroke()
+
+}
+
+})
 
 })
 
@@ -231,7 +243,6 @@ requestAnimationFrame(animate)
 animate()
 
 </script>
-
 
 
 <script type="module" src="app.js"></script>
