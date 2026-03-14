@@ -7,30 +7,27 @@
 
 <link rel="stylesheet" href="style.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
 
 <header>
 
-<h1>Vaibhav AI Studio</h1>
-
+<h1 class="logo">Vaibhav AI Studio</h1>
 <p class="author">Vaibhav Thakur</p>
 
 <nav>
-
-<a href="index.html">Home</a>
+<a href="#">Home</a>
 <a href="showcase.html">Showcase</a>
 <a href="login.html">Login</a>
-
 </nav>
 
-<button id="theme-toggle">🌙</button>
+<button id="themeToggle">🌙</button>
 
 </header>
 
-
-<!-- INSTAGRAM COMMUNITY -->
 
 <section class="insta-counter">
 
@@ -40,10 +37,12 @@
 
 <h3>@vaibhavrjawt</h3>
 
-<p class="followers">10K+ Followers</p>
+<p id="followers">10K+ Followers</p>
 
-<a href="https://instagram.com/vaibhavrjawt" target="_blank" class="follow-btn">
+<a class="follow-btn" href="https://instagram.com/vaibhavrjawt" target="_blank">
+
 Follow on Instagram
+
 </a>
 
 </div>
@@ -51,39 +50,26 @@ Follow on Instagram
 </section>
 
 
-
-<!-- FEATURED VIDEOS -->
-
 <section class="videos">
 
 <h2>Featured AI Videos</h2>
 
 <div class="video-grid">
 
-<div class="video-card">
-
 <blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVlP8GAgdgb/"
-data-instgrm-version="14"></blockquote>
-
-</div>
-
-
-<div class="video-card">
+data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
+data-instgrm-version="14">
+</blockquote>
 
 <blockquote class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
-data-instgrm-version="14"></blockquote>
-
-</div>
+data-instgrm-version="14">
+</blockquote>
 
 </div>
 
 </section>
 
-
-
-<!-- ABOUT CREATOR -->
 
 <section class="about-section">
 
@@ -100,13 +86,10 @@ data-instgrm-version="14"></blockquote>
 <p class="role">Founder • AI Video Creator</p>
 
 <p>
-Hi, I'm Vaibhav Thakur — the creator behind the Instagram page
-<strong>@vaibhavrjawt</strong>.
-</p>
 
-<p>
-I create cinematic AI videos, storytelling reels, and futuristic visual content.
-This platform showcases my work and helps track brand promotions.
+I create cinematic AI storytelling videos and viral reels.  
+My mission is to merge creativity with artificial intelligence and build futuristic content for social media.
+
 </p>
 
 </div>
@@ -115,20 +98,15 @@ This platform showcases my work and helps track brand promotions.
 
 </section>
 
-
-
-<!-- CONTACT -->
 
 <section class="contact">
 
 <h2>Contact</h2>
 
-<p>Email: shaurabhkachhawah@gmail.com</p>
-
+<p>Email: shaurabhkchahwah@gmail.com</p>
 <p>Instagram: @vaibhavrjawt</p>
 
 </section>
-
 
 
 <footer>
@@ -139,6 +117,18 @@ This platform showcases my work and helps track brand promotions.
 
 
 <script async src="//www.instagram.com/embed.js"></script>
+
+<script>
+
+const themeBtn=document.getElementById("themeToggle")
+
+themeBtn.onclick=()=>{
+
+document.body.classList.toggle("light-theme")
+
+}
+
+</script>
 
 <script type="module" src="app.js"></script>
 
