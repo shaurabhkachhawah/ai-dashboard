@@ -40,6 +40,22 @@ alert(error.message)
 })
 
 }
+window.register = function(){
+
+let email=document.getElementById("email").value
+let password=document.getElementById("password").value
+
+createUserWithEmailAndPassword(auth,email,password)
+
+.then(()=>{
+alert("Account created successfully")
+})
+
+.catch((error)=>{
+alert(error.message)
+})
+
+}
 
 
 
