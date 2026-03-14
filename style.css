@@ -17,8 +17,8 @@ background:rgba(0,0,0,0.85);
 box-shadow:0 0 20px rgba(255,0,0,0.6);
 }
 
-.logo{
-font-size:40px;
+header h1{
+font-size:38px;
 letter-spacing:2px;
 }
 
@@ -27,6 +27,10 @@ font-size:18px;
 color:#ff3b3b;
 margin-top:5px;
 text-shadow:0 0 10px #ff0000;
+}
+
+nav{
+margin-top:10px;
 }
 
 nav a{
@@ -43,84 +47,38 @@ text-shadow:0 0 10px #ff0000;
 }
 
 
-/* HERO */
+/* INSTAGRAM FOLLOWER COUNTER */
 
-.hero{
+.insta-counter{
 text-align:center;
-padding:100px 20px;
+padding:60px 20px;
 }
 
-.hero h2{
-color:#ff3b3b;
-font-size:32px;
-}
-
-.hero p{
-opacity:0.8;
-}
-
-
-/* BUTTON */
-
-.btn{
+.counter-box{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:15px;
 display:inline-block;
-padding:12px 30px;
-background:linear-gradient(45deg,#ff0000,#990000);
-border-radius:30px;
+box-shadow:0 0 25px rgba(255,0,0,0.6);
+}
+
+.counter-box h3{
+color:#ff4040;
+}
+
+.follow-btn{
+background:#ff2d2d;
+padding:10px 25px;
+border-radius:25px;
 color:white;
 text-decoration:none;
-font-weight:bold;
-margin-top:15px;
+display:inline-block;
+margin-top:10px;
 transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #ff0000;
-}
-
-
-/* FEATURES */
-
-.features{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:40px;
-flex-wrap:wrap;
-}
-
-.feature{
-width:220px;
-text-align:center;
-padding:20px;
-background:rgba(0,0,0,0.6);
-border-radius:10px;
-box-shadow:0 0 15px rgba(255,0,0,0.3);
-transition:0.3s;
-}
-
-.feature:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #ff0000;
-}
-
-
-/* ABOUT */
-
-.container{
-display:flex;
-justify-content:center;
-padding:40px;
-margin-top;120px;
-}
-
-.card{
-width:400px;
-background:rgba(0,0,0,0.6);
-border-radius:15px;
-padding:30px;
-box-shadow:0 0 20px rgba(255,0,0,0.4);
+.follow-btn:hover{
+box-shadow:0 0 15px #ff0000;
 }
 
 
@@ -128,14 +86,70 @@ box-shadow:0 0 20px rgba(255,0,0,0.4);
 
 .videos{
 text-align:center;
-padding:40px;
+padding:60px 20px;
 }
 
-video{
-width:350px;
-margin:15px;
-border-radius:15px;
+.video-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.instagram-media{
+max-width:350px !important;
+border-radius:10px !important;
+box-shadow:0 0 20px rgba(255,0,0,0.5);
+}
+
+
+/* ABOUT SECTION */
+
+.about-section{
+padding:80px 20px;
+text-align:center;
+}
+
+.about-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+
+/* ROUND FOUNDER PHOTO */
+
+.founder-img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #ff2d2d;
 box-shadow:0 0 20px rgba(255,0,0,0.6);
+}
+
+
+/* ABOUT TEXT */
+
+.about-text{
+max-width:500px;
+text-align:left;
+}
+
+.about-text h3{
+font-size:26px;
+color:#ff4040;
+margin-bottom:5px;
+}
+
+.role{
+color:#ff7070;
+font-weight:bold;
+margin-bottom:15px;
 }
 
 
@@ -143,7 +157,7 @@ box-shadow:0 0 20px rgba(255,0,0,0.6);
 
 .contact{
 text-align:center;
-padding:40px;
+padding:60px 20px;
 }
 
 .contact a{
@@ -185,7 +199,7 @@ box-shadow:0 0 10px #ff0000;
 }
 
 
-/* BUTTON GENERAL */
+/* BUTTON */
 
 button{
 padding:12px 25px;
@@ -201,91 +215,4 @@ transition:0.3s;
 button:hover{
 transform:scale(1.1);
 box-shadow:0 0 15px #ff0000;
-}
-.video-grid{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-}
-
-.instagram-media{
-max-width:350px !important;
-}
-/* ABOUT SECTION */
-
-.about-section{
-padding:80px 20px;
-text-align:center;
-}
-
-.about-container{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-/* ROUND FOUNDER PHOTO */
-
-.founder-img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #ff2d2d;
-box-shadow:0 0 20px rgba(255,0,0,0.6);
-}
-
-/* TEXT AREA */
-
-.about-text{
-max-width:500px;
-text-align:left;
-}
-
-.about-text h3{
-font-size:26px;
-color:#ff4040;
-margin-bottom:5px;
-}
-.insta-counter{
-text-align:center;
-padding:60px;
-}
-
-.counter-box{
-background:rgba(0,0,0,0.6);
-padding:30px;
-border-radius:15px;
-display:inline-block;
-box-shadow:0 0 25px rgba(255,0,0,0.6);
-}
-
-.counter-box h3{
-color:#ff4040;
-}
-
-#followers{
-font-size:32px;
-font-weight:bold;
-margin:10px 0;
-}
-
-.follow-btn{
-background:#ff2d2d;
-padding:10px 25px;
-border-radius:25px;
-color:white;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
-}
-
-.role{
-color:#ff7070;
-font-weight:bold;
-margin-bottom:15px;
 }
