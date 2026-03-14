@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
-import {
+import { 
 getAuth,
 signInWithEmailAndPassword,
 createUserWithEmailAndPassword
@@ -20,10 +20,15 @@ getDocs
 const firebaseConfig = {
 
 apiKey:"AIzaSyCNfhwjpNk9k6dTYyD4V1qzMvVippuLx64",
+
 authDomain:"ai-dashboard-14782.firebaseapp.com",
+
 projectId:"ai-dashboard-14782",
+
 storageBucket:"ai-dashboard-14782.firebasestorage.app",
+
 messagingSenderId:"256117832488",
+
 appId:"1:256117832488:web:2c75c646083f1f2449ee1d"
 
 };
@@ -42,17 +47,17 @@ const db = getFirestore(app);
 
 /* LOGIN */
 
-window.login = function(){
+window.login=function(){
 
-let email = document.getElementById("email").value
+let email=document.getElementById("email").value
 
-let password = document.getElementById("password").value
+let password=document.getElementById("password").value
 
 signInWithEmailAndPassword(auth,email,password)
 
 .then(()=>{
 
-alert("Login Successful")
+alert("Login successful")
 
 window.location="dashboard.html"
 
@@ -70,17 +75,17 @@ alert(error.message)
 
 /* REGISTER */
 
-window.register = function(){
+window.register=function(){
 
-let email = document.getElementById("email").value
+let email=document.getElementById("email").value
 
-let password = document.getElementById("password").value
+let password=document.getElementById("password").value
 
 createUserWithEmailAndPassword(auth,email,password)
 
 .then(()=>{
 
-alert("Account created successfully")
+alert("Account created")
 
 })
 
@@ -94,13 +99,13 @@ alert(error.message)
 
 
 
-/* ADD BRAND COLLABORATION */
+/* ADD PROMOTION */
 
-window.addPromotion = async function(){
+window.addPromotion=async function(){
 
-let brand = document.getElementById("brand").value
-let amount = document.getElementById("amount").value
-let method = document.getElementById("method").value
+let brand=document.getElementById("brand").value
+let amount=document.getElementById("amount").value
+let method=document.getElementById("method").value
 
 try{
 
@@ -185,8 +190,7 @@ particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
 vx:(Math.random()-0.5),
-vy:(Math.random()-0.5),
-size:2
+vy:(Math.random()-0.5)
 
 })
 
@@ -205,7 +209,7 @@ if(p.x<0||p.x>canvas.width) p.vx*=-1
 if(p.y<0||p.y>canvas.height) p.vy*=-1
 
 ctx.beginPath()
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
+ctx.arc(p.x,p.y,2,0,Math.PI*2)
 ctx.fillStyle="#ff2d2d"
 ctx.fill()
 
