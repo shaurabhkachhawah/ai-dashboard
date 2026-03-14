@@ -14,34 +14,27 @@ getDocs
 } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 
-
 /* FIREBASE CONFIG */
 
 const firebaseConfig = {
 
 apiKey:"AIzaSyCNfhwjpNk9k6dTYyD4V1qzMvVippuLx64",
-
 authDomain:"ai-dashboard-14782.firebaseapp.com",
-
 projectId:"ai-dashboard-14782",
-
 storageBucket:"ai-dashboard-14782.firebasestorage.app",
-
 messagingSenderId:"256117832488",
-
 appId:"1:256117832488:web:2c75c646083f1f2449ee1d"
 
 };
 
 
-
 /* INITIALIZE FIREBASE */
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 
-const auth = getAuth(app);
+const auth = getAuth(app)
 
-const db = getFirestore(app);
+const db = getFirestore(app)
 
 
 
@@ -50,7 +43,6 @@ const db = getFirestore(app);
 window.login=function(){
 
 let email=document.getElementById("email").value
-
 let password=document.getElementById("password").value
 
 signInWithEmailAndPassword(auth,email,password)
@@ -78,7 +70,6 @@ alert(error.message)
 window.register=function(){
 
 let email=document.getElementById("email").value
-
 let password=document.getElementById("password").value
 
 createUserWithEmailAndPassword(auth,email,password)
@@ -170,6 +161,22 @@ loadPromotions()
 
 
 
+/* THEME SWITCH */
+
+const themeBtn=document.getElementById("themeToggle")
+
+if(themeBtn){
+
+themeBtn.onclick=function(){
+
+document.body.classList.toggle("light-mode")
+
+}
+
+}
+
+
+
 /* AI NEURAL BACKGROUND */
 
 const canvas=document.getElementById("ai-bg")
@@ -178,8 +185,16 @@ if(canvas){
 
 const ctx=canvas.getContext("2d")
 
+function resizeCanvas(){
+
 canvas.width=window.innerWidth
 canvas.height=window.innerHeight
+
+}
+
+resizeCanvas()
+
+window.addEventListener("resize",resizeCanvas)
 
 let particles=[]
 
@@ -209,8 +224,11 @@ if(p.x<0||p.x>canvas.width) p.vx*=-1
 if(p.y<0||p.y>canvas.height) p.vy*=-1
 
 ctx.beginPath()
+
 ctx.arc(p.x,p.y,2,0,Math.PI*2)
+
 ctx.fillStyle="#ff2d2d"
+
 ctx.fill()
 
 particles.forEach(p2=>{
@@ -223,9 +241,13 @@ let dist=Math.sqrt(dx*dx+dy*dy)
 if(dist<120){
 
 ctx.beginPath()
+
 ctx.strokeStyle="rgba(255,0,0,0.2)"
+
 ctx.moveTo(p.x,p.y)
+
 ctx.lineTo(p2.x,p2.y)
+
 ctx.stroke()
 
 }
