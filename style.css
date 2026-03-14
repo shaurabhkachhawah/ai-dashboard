@@ -1,6 +1,8 @@
+/* BODY */
+
 body{
 
-font-family:Poppins,sans-serif;
+font-family:'Poppins',sans-serif;
 margin:0;
 color:white;
 background:#000;
@@ -23,15 +25,26 @@ z-index:-1;
 }
 
 
+
 /* HEADER */
 
 header{
 
 text-align:center;
 padding:25px;
-background:rgba(0,0,0,0.8);
+
+background:rgba(0,0,0,0.25);
+
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(255,0,0,0.3);
 
 }
+
+
+
+/* HEADER TOP BAR */
 
 .top-bar{
 
@@ -42,17 +55,27 @@ padding:0 40px;
 
 }
 
+
+
+/* LOGO */
+
 .logo{
 
 font-size:38px;
 
 }
 
+
+
+/* AUTHOR */
+
 .author{
 
 color:#ff4040;
+margin-top:5px;
 
 }
+
 
 
 /* NAVIGATION */
@@ -63,6 +86,7 @@ margin:10px;
 color:#ff4040;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 
 }
 
@@ -74,17 +98,21 @@ text-shadow:0 0 10px red;
 }
 
 
-/* GLOW LINE */
+
+/* RED GLOW LINE */
 
 .nav-line{
 
 width:60%;
 height:3px;
 margin:20px auto;
+
 background:linear-gradient(90deg,transparent,#ff0000,transparent);
+
 box-shadow:0 0 15px red;
 
 }
+
 
 
 /* THEME BUTTON */
@@ -97,13 +125,23 @@ color:white;
 padding:10px 20px;
 border-radius:25px;
 cursor:pointer;
+
 box-shadow:0 0 15px rgba(255,0,0,0.8);
+
+transition:0.3s;
+
+}
+
+#themeToggle:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 25px red;
 
 }
 
 
 
-/* INSTAGRAM COUNTER */
+/* INSTAGRAM COMMUNITY */
 
 .insta-counter{
 
@@ -117,8 +155,16 @@ padding:70px;
 background:rgba(0,0,0,0.7);
 padding:30px;
 border-radius:15px;
+
 display:inline-block;
+
 box-shadow:0 0 25px rgba(255,0,0,0.6);
+
+}
+
+.counter-box h3{
+
+color:#ff4040;
 
 }
 
@@ -129,6 +175,10 @@ font-weight:bold;
 
 }
 
+
+
+/* FOLLOW BUTTON */
+
 .follow-btn{
 
 background:#ff2d2d;
@@ -136,6 +186,9 @@ padding:12px 28px;
 border-radius:25px;
 color:white;
 text-decoration:none;
+
+display:inline-block;
+margin-top:10px;
 
 }
 
@@ -159,18 +212,24 @@ flex-wrap:wrap;
 
 }
 
+
+
+/* INSTAGRAM EMBED STYLE */
+
 .instagram-media{
 
 max-width:350px !important;
 border-radius:15px !important;
+
 overflow:hidden !important;
+
 box-shadow:0 0 20px rgba(255,0,0,0.6);
 
 }
 
 
 
-/* ABOUT */
+/* ABOUT SECTION */
 
 .about-section{
 
@@ -185,19 +244,33 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:40px;
+
 flex-wrap:wrap;
 
 }
+
+
+
+/* FOUNDER IMAGE */
 
 .founder-img{
 
 width:180px;
 height:180px;
+
 border-radius:50%;
+
 object-fit:cover;
+
 border:4px solid red;
 
+box-shadow:0 0 20px rgba(255,0,0,0.6);
+
 }
+
+
+
+/* ABOUT TEXT */
 
 .about-text{
 
@@ -209,6 +282,7 @@ text-align:left;
 .role{
 
 color:#ff7070;
+font-weight:bold;
 
 }
 
@@ -231,8 +305,70 @@ footer{
 
 text-align:center;
 padding:25px;
-background:#000;
+
+background:rgba(0,0,0,0.8);
+
 border-top:1px solid red;
+
+margin-top:40px;
+
+}
+
+
+
+/* INPUTS */
+
+input{
+
+padding:12px;
+margin:10px 0;
+
+width:100%;
+
+border:none;
+border-radius:8px;
+
+outline:none;
+
+background:rgba(255,255,255,0.1);
+
+color:white;
+
+}
+
+input:focus{
+
+box-shadow:0 0 10px red;
+
+}
+
+
+
+/* BUTTON GENERAL */
+
+button{
+
+padding:12px 25px;
+
+border:none;
+border-radius:30px;
+
+background:linear-gradient(45deg,#ff0000,#990000);
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 15px red;
 
 }
 
@@ -249,13 +385,13 @@ color:#111;
 
 .light-theme header{
 
-background:#fff;
+background:rgba(255,255,255,0.6);
 
 }
 
 .light-theme .counter-box{
 
-background:#fff;
+background:white;
 color:#111;
 
 }
@@ -263,5 +399,11 @@ color:#111;
 .light-theme footer{
 
 background:#eee;
+
+}
+
+.light-theme nav a{
+
+color:#ff2d2d;
 
 }
