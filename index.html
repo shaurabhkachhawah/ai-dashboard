@@ -12,8 +12,6 @@
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
 <h1>AI Video Creator</h1>
@@ -42,7 +40,12 @@
 
 <h3>@vaibhavrjawt</h3>
 
-<p id="followers">Loading followers...</p>
+<iframe 
+src="https://widgets.sociablekit.com/instagram-followers-count/iframe/255065"
+width="300"
+height="150"
+frameborder="0">
+</iframe>
 
 <a href="https://instagram.com/vaibhavrjawt" target="_blank" class="follow-btn">
 Follow on Instagram
@@ -62,6 +65,7 @@ Follow on Instagram
 
 <div class="video-grid">
 
+
 <blockquote class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVlP8GAgdgb/"
 data-instgrm-version="14"></blockquote>
@@ -70,6 +74,7 @@ data-instgrm-version="14"></blockquote>
 <blockquote class="instagram-media"
 data-instgrm-permalink="https://www.instagram.com/reel/DVgGXN4gdUy/"
 data-instgrm-version="14"></blockquote>
+
 
 </div>
 
@@ -125,8 +130,6 @@ This platform showcases my work and helps track brand promotions.
 
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <p>© 2026 Vaibhav Thakur AI Video Creator Platform</p>
@@ -135,31 +138,7 @@ This platform showcases my work and helps track brand promotions.
 
 
 
-<!-- INSTAGRAM SCRIPT -->
-
 <script async src="//www.instagram.com/embed.js"></script>
-
-
-
-<!-- FOLLOWER COUNTER SCRIPT -->
-
-<script>
-
-async function loadFollowers(){
-
-let response = await fetch("https://api.countapi.xyz/hit/vaibhavrjawt/instagram");
-
-let data = await response.json();
-
-document.getElementById("followers").innerText =
-data.value + " Followers";
-
-}
-
-loadFollowers()
-
-</script>
-
 
 </body>
 
