@@ -201,3 +201,13 @@ button:hover{
 transform:scale(1.1);
 box-shadow:0 0 15px #ff0000;
 }
+.video-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.instagram-media{
+max-width:350px !important;
+}
